@@ -330,7 +330,7 @@ export const projectsData = [
     {
         name: 'RodaAppi - work in progress',
         desc: 'A web application for browsing and posting capoeira events.',
-        url: '/projects/image-1.jpg',
+        url: '/projects/work-in-progress-1.png',
         width: '400',
         height: '400',
         tech: ['IntelliJ', 'Java', 'TypeScript', 'HTML', 'CSS', 'TailwindCSS', 'Vite', 'React', 'FramerMotion', 'RestAPI', 'Spring', 'MongoDB'],
