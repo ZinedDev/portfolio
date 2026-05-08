@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "@fontsource/outfit";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-outfit: "outfit", sans-serif;
+    --breakpoint-xl: 1400px;
+    --breakpoint-lg: 1150px;
+    --breakpoint-md: 767px;
+    --breakpoint-sm: 639px;
+    --breakpoint-xs: 393px;
+}
+
+body {
+    --font-family: var(--font-outfit), serif;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+@utility theme-mode {
+    @apply bg-linear-to-t from-amber-200 to-amber-100 dark:bg-linear-to-t dark:from-zinc-900 dark:to-zinc-800  transition-colors duration-500;
+}
+
+@utility no-scrollbar {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Add this to your section utility or global styles */
+.snap-start {
+    scroll-snap-align: start;
+    scroll-snap-stop: always; /* Forces the scroll to stop at this section before allowing further scrolling */
+}
+
+/* Add this to your section utility or global styles */
+.snap-center {
+    scroll-snap-align: center;
+    scroll-snap-stop: always; /* Forces the scroll to stop at this section before allowing further scrolling */
+}
+
+
