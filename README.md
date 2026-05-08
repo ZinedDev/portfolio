@@ -26,4 +26,4 @@ This is a modern, responsive personal portfolio website designed to showcase my 
 *   **Loading Animations:** Custom entrance animations for a polished user experience.
 
 ---
-*Developed by [Deniz Wassmuth](https://github.com/DenizWassmuth)*
+*Developed by [ZinedDev](https://github.com/zineddev)*
