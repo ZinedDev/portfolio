@@ -1,7 +1,18 @@
 import {motion} from "framer-motion";
 import {useState} from "react";
 
-export default function Project({data, index}) {
+interface ProjectProps {
+  data: {
+    url: string;
+    width: string | number;
+    height: string | number;
+    name: string;
+    desc: string;
+  };
+  index: number;
+}
+
+export default function Project({data, index}: ProjectProps) {
 
   const [show, setShow] = useState(false);
 

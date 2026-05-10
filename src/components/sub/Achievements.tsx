@@ -1,17 +1,21 @@
 import {motion, useMotionValue} from "framer-motion";
+import type { ReactNode } from "react";
 
-export default function Achievements({title, amount, children}) {
+interface AchievementsProps {
+    title: string;
+    amount: number;
+    children: ReactNode;
+}
+
+export default function Achievements({title, amount, children}: AchievementsProps) {
     const number = useMotionValue(0); // does not trigger re-render on change, updates smoothly
 
-    const count = (amount) => {
+    const count = (amount: number) => {
         let i = 0;
         const updateCount = () => {
-            let timeOut
             if (i <= amount) {
                 number.set(i++);
-                timeOut = setTimeout(updateCount, 0);
-            } else {
-                clearTimeout(timeOut);
+                setTimeout(updateCount, 0);
             }
         }
         updateCount();
@@ -23,7 +27,7 @@ export default function Achievements({title, amount, children}) {
             <h1 className={"flex flex-col gap-y-2"}>
                 <motion.span
                     className={"text-2xl max-lg:text-xl font-light text-yellow-600"}
-                    whileInView={() => count(amount)}
+                    onViewportEnter={() => count(amount)}
                     viewport={{once: true}}
                 >
                     {number}

@@ -1,4 +1,11 @@
-export default function Profession({title, children}) {
+import type { ReactNode } from "react";
+
+interface ProfessionProps {
+    title: string;
+    children: ReactNode;
+}
+
+export default function Profession({title, children}: ProfessionProps) {
 
     return (
         <div className={"flex items-end gap-x-3"}>

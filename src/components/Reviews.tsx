@@ -9,19 +9,27 @@ export default function Reviews() {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(false);
     const prevIndex = useRef(0);
-    const slides = useRef([])
+    const slides = useRef<(HTMLDivElement | null)[]>([])
 
     const rightClickHandler = () => {
-        animate(slides.current[index], {x:0}, {delay:0.3})
-        animate(slides.current[prevIndex.current], {
-            scale: index === 0 ? 1 : 0.4,
-            rotate: index === 0 ? 0 : index % 2 === 0 ? 10 : -10,
-        })
+        if (slides.current[index]) {
+            animate(slides.current[index]!, {x: 0}, {delay: 0.3})
+        }
+        if (slides.current[prevIndex.current]) {
+            animate(slides.current[prevIndex.current]!, {
+                scale: index === 0 ? 1 : 0.4,
+                rotate: index === 0 ? 0 : index % 2 === 0 ? 10 : -10,
+            })
+        }
     }
 
     const leftClickHandler = () => {
-        animate(slides.current[index], {scale:1, rotate:0}, {delay:0.2})
-        animate(slides.current[prevIndex.current], {x: "100%"})
+        if (slides.current[index]) {
+            animate(slides.current[index]!, {scale: 1, rotate: 0}, {delay: 0.2})
+        }
+        if (slides.current[prevIndex.current]) {
+            animate(slides.current[prevIndex.current]!, {x: "100%"})
+        }
     }
 
     useEffect(() => {
@@ -44,7 +52,7 @@ export default function Reviews() {
                             initial={{x:"100%"}}
                             key={i}
                             className={"absolute inset-0 flex flex-col items-center justify-center gap-y-7 max-lg:gap-y-4 border border-yellow-500 bg-zinc-50 dark:bg-zinc-400 transition-colors duration-500 max-lg:p-5 rounded-xl"}
-                            ref={(el) => slides.current.push(el)}
+                            ref={(el) => { if (el) slides.current[i] = el; }}
                         >
                             <img
                                 src={data.image}

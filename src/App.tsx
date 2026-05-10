@@ -9,7 +9,7 @@ import {sections} from "./assets/Sections.tsx";
 function App() {
 
     const [id, setId] = useState("home");
-    const compsRef = useRef(null);
+    const compsRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -31,7 +31,7 @@ function App() {
         if (!compsRef.current) return;
         const compsArray = Array.from(compsRef.current.children)
         compsArray.forEach((comp) => {
-            observer.observe(comp)
+            observer.observe(comp as Element)
         })
     }, [])
 

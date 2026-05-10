@@ -1,7 +1,8 @@
 import HeroImage from "../../public/portfolio-3.png";
 import {heroIcons} from "../assets";
 import {useMotionValue, useTransform, motion, useSpring} from "framer-motion";
-import {useState} from "react";
+import type {Variants} from "framer-motion";
+import React, {useState} from "react";
 
 
 export default function Hero() {
@@ -17,7 +18,7 @@ export default function Hero() {
     const x = useMotionValue(windowOffset.innerWidth / 2);
     const y = useMotionValue(windowOffset.innerHeight / 2);
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const {clientX, clientY} = e;
         x.set(clientX)
         y.set(clientY)
@@ -46,7 +47,7 @@ export default function Hero() {
     const rotateY = useTransform(xSpring, [0, innerWidth], [25, -25])
     const rotateX = useTransform(ySpring, [0, innerHeight], [-25, 25])
 
-    const variants = {
+    const variants: Variants = {
         visible: (i: number) => ({
             opacity: 1,
             x: 0,

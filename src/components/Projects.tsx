@@ -10,11 +10,15 @@ export default function Projects() {
     const [tech, setTech] = useState("All");
     const [index, setIndex] = useState(0);
     const prevIndex = useRef(0); // does not trigger re-render on change
-    const buttonsRef = useRef([]);
+    const buttonsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
     const handleClick = () => {
-        animate(buttonsRef.current[prevIndex.current], {opacity: .8, scale: 1})
-        animate(buttonsRef.current[index], {opacity: 1, scale: 1.1})
+        if (buttonsRef.current[prevIndex.current]) {
+            animate(buttonsRef.current[prevIndex.current]!, {opacity: .8, scale: 1})
+        }
+        if (buttonsRef.current[index]) {
+            animate(buttonsRef.current[index]!, {opacity: 1, scale: 1.1})
+        }
     }
 
     useEffect(() => {

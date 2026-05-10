@@ -1,10 +1,15 @@
 import {moonIcon, sunIcon} from "../../assets";
 import {useEffect, useRef, useState} from "react";
+import type {ReactNode} from "react";
 import {motion} from "framer-motion";
 
-export default function Toggle({children}) {
+interface ToggleProps {
+    children: ReactNode;
+}
+
+export default function Toggle({children}: ToggleProps) {
     const [darkTheme, setDarkTheme] = useState(false);
-    const mainRef = useRef(null);
+    const mainRef = useRef<HTMLElement>(null);
 
     const applyTheme = (isDark: boolean) => {
         if (!mainRef.current) return;
