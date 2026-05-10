@@ -349,7 +349,7 @@ export const projectsData = [
 
 export const projectsButton = [
     'All',
-    'UnrealEngine',
+    'UE',
     'C++',
     'Java',
     'TS',
