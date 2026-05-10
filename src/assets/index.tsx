@@ -137,10 +137,10 @@ export const arrowLeftIcon = <ArrowLeftSFillIcon />
 
 export const aboutText =
     "Well, hello there!? \n" +
-    "I am Deniz... thank you for your visit! \n\n" +
+    "I am Deniz... thank you for visiting! \n\n" +
     "Feel free to check out my experiences, skills and interests. \n" +
     "Hover over the icons at the bottom and learn what I am about. \n\n"+
-    "You can also download my resume by clicking the button below. \n\n"
+    "You can also download a tech stack focused version of my resume by clicking the red button below. \n\n"
 // End of About Me
 
 // Experience
@@ -352,13 +352,13 @@ export const projectsButton = [
     'UnrealEngine',
     'C++',
     'Java',
-    'TypeScript',
+    'TS',
     'HTML',
     'CSS',
-    'TailwindCSS',
+    'Tailwind',
     'React',
     'Vite',
-    'FramerMotion',
+    'Motion',
     'Spring',
     'MongoDB',
 ]
@@ -441,7 +441,7 @@ export const questions = [
     {
         question: 'Do you use AI in your development process? ',
         answer:
-        'Yes, I use AI for about a year now. What I use it most for is to assist me with code completion, optimization, debugging and last but not least research and explanation. I have neither a long history of coding experience nor traditional or university grade training in software development. ' +
+        'Yes, I have been using AI for about a year now. What I use it most for is optimization, debugging and last but not least research and explanation. I have neither a long history of coding experience nor traditional or university grade training in software development. ' +
             'Using AI has helped me to break down complex themes and understand them more easily. It has facilitated my learning process and made my workflows more efficient.',
     },
 
