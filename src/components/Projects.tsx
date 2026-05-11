@@ -29,13 +29,12 @@ export default function Projects() {
     }, [index])
 
     return (
-        <div className={"min-h-screen flex flex-col items-center py-20"}>
+        <div className={"min-h-screen flex flex-col items-center "}>
             <Heading text={"Projects"}/>
             <div className={"flex flex-wrap items-center justify-center gap-5 max-sm:gap-2 py-5 max-sm:py-2 px-2"}>
                 {projectsButton.map((buttonText, i) => (
                     <motion.button
                         key={i}
-                        //initial={{opacity: i === 0 ? 1 : 0.8, scale: i === 0 ? 1.2 : 1}}
                         initial="hidden"
                         whileInView="visible"
                         custom={i}
@@ -69,8 +68,9 @@ export default function Projects() {
                 })
                     .map((data, i) => (
                         <motion.div
-                            key={`id-${i}`}
+                            key={`id-${data.name}`}
                             layout
+                            transition={{ layout: { type: "spring", stiffness: 100} }}
                         >
                             <Project
                                 key={i}

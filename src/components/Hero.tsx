@@ -136,12 +136,12 @@ export default function Hero() {
                 </div>
                 <motion.a
                     href="#contact"
-                    initial = {{opacity: 0, x: 200}}
+                    initial = {{opacity: 0, x: window.innerWidth > 768 ? 200 : 50}}
                     whileInView = {{opacity: 1, x: 0}}
-                    transition={{duration: .3, delay: 0.2, type: "spring", stiffness: 100}}
+                    transition={{duration: .4, delay: 0.2, type: "spring", stiffness: 100}}
                     viewport = {{once: false}}
                     className={
-                        "mx-auto mt-7 block w-max rounded-lg bg-red-600 hover:bg-red-500 transition-colors duration-200 px-3 py-1 font-light capitalize tracking-wider text-white "
+                        "mx-auto mt-6 block w-max px-2 py-1 rounded-lg font-light capitalize tracking-wider text-white bg-red-600 hover:bg-red-500 transition-colors duration-200  "
                     }
                     onMouseEnter={() => setButtonHover(true)}
                     onMouseLeave={() => setButtonHover(false)}

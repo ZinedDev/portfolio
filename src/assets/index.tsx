@@ -100,8 +100,8 @@ export const professions = [
     {
         title: 'Game Dev',
         icon: <GamepadLineIcon />,
-        text: 'Gaming was a passion of mine from a young age on. In 2022 I decided to shift my attention from just playing games to learn how to make them. ' +
-                'I have been learning C++ and Unreal Engine for several years now. At this stage I feel quite comfortable programming and implementing gameplay mechanics as well as creating VFXs with Niagara. ' +
+        text: 'In 2023 I decided to pick a new hobby: making games. ' +
+                'Since then I have been learning C++ and Unreal Engine through working on personal projects. At this stage I feel quite comfortable programming and implementing gameplay mechanics as well as creating VFXs with Niagara. ' +
                 'Currently I am expanding my knowledge on profiling and performance optimization. There is a small game in the works, and I am excited to share it with you soon! '
     },
     {
@@ -112,9 +112,9 @@ export const professions = [
                 'I am currently working on several other personal projects, which will soon be presented on this website. '
     },
     {
-        title: 'Special Needs Education',
+        title: 'Special Education',
         icon: <ClipboardLineIcon />,
-        text: 'I studied Special Needs Education at the University of Hamburg in two steps (B.A. 2008 - 2012 & M.A. 2014 - 2018). ' +
+        text: 'I studied Special Education at the University of Hamburg in two steps (B.A. 2008 - 2012 & M.A. 2014 - 2018). ' +
                 'My studies focused on children with difficulties in learning and social development. ' +
                 'From 2007 till 2023 I worked in various types of social work related professional fields: Assisting bodily and/or mentally disabled people, ' +
                 'teaching, educating and coaching of pre-schoolers to 10 graders, inside and outside the school system, providing support and consultation in protectories etc. '
@@ -325,7 +325,7 @@ export const projectsData = [
         url: '/portfolio-2.png',
         width: '400',
         height: '400',
-        tech: ['IntelliJ', 'TypeScript', 'HTML', 'CSS', 'TailwindCSS', 'Vite', 'React', 'FramerMotion'],
+        tech: ['TS', 'HTML', 'CSS', 'Tailwind', 'React', 'Vite', 'Motion'],
     },
     {
         name: 'RodaAppi - work in progress',
@@ -333,7 +333,7 @@ export const projectsData = [
         url: '/work-in-progress-1.png',
         width: '400',
         height: '400',
-        tech: ['IntelliJ', 'Java', 'TypeScript', 'HTML', 'CSS', 'TailwindCSS', 'Vite', 'React', 'FramerMotion', 'RestAPI', 'Spring', 'MongoDB'],
+        tech: ['Java', 'TS', 'HTML', 'CSS', 'Tailwind', 'React', 'Vite', 'Motion', 'RestAPI', 'Spring', 'MongoDB'],
     },
     // {
     //     name: 'RodaAppi - work in progress',

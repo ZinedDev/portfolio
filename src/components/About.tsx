@@ -30,11 +30,8 @@ export default function About() {
                     whileInView={{opacity: 1, scale: 1}}
                     transition={{delay: 0.1, type: "spring", stiffness: window.innerWidth > 768 ? 60 : 30}}
                     viewport={{once: false}}
-                    className={"relative flex flex-col xl:right-15 max-w-200 rounded-xl bg-amber-100 dark:bg-zinc-600 transition-colors duration-500 p-5 text-justify border border-yellow-600 w-full"}
+                    className={"relative flex flex-col w-full max-w-200 p-5 xl:right-15 text-justify border border-yellow-600 rounded-xl bg-amber-100 dark:bg-zinc-600 transition-colors duration-500"}
                 >
-                    <span className={"absolute left-41 top-60 -rotate-90 scale-[2.5] text-yellow-600 dark:text-zinc-600 transition-colors duration-500 max-sm:hidden"}>
-                        {arrowLeftIcon}
-                    </span>
                     <AnimatePresence mode={"wait"}>
                         <motion.p
                             key={text === aboutText ? "default" : text}
@@ -42,7 +39,7 @@ export default function About() {
                             animate={{opacity: 1, y: 0}}
                             exit={{opacity: 0, y: -10}}
                             transition={{duration: 0.4, delay: 0.1}}
-                            className={"content-center h-50 max-sm:h-75 first-letter:pl-2 text-lg font-light text-gray-600 dark:text-white p-2 transition-colors duration-500 max-lg:text-[16px] max-sm:text-[14px] whitespace-pre-line"}
+                            className={"content-center h-60 max-sm:h-80 first-letter:pl-2 text-lg font-light text-gray-600 dark:text-white p-2 transition-colors duration-500 max-lg:text-[16px] max-sm:text-[14px] whitespace-pre-line"}
                         >
                             {text}
                         </motion.p>
@@ -66,8 +63,13 @@ export default function About() {
                 <span>Download</span>
                 <span className={"text-xl"}>{downloadIcon}</span>
             </motion.a>
+            <span
+                className={"relative bottom-8 left-15 -rotate-90 scale-[2.5] text-yellow-600 dark:text-zinc-600 transition-colors duration-500 max-sm:hidden"}
+            >
+                    {arrowLeftIcon}
+                </span>
             <div
-                className={"mt-20 max-sm:mt-10 p-10 w-full flex flex-wrap max-sm:flex-col items-center max-sm:items-start justify-between gap-y-2"}>
+                className={"mt-15 max-sm:mt-5 p-10 w-full flex flex-wrap max-sm:flex-col items-center max-sm:items-start justify-between gap-y-2"}>
                 {professions.map((profession, i) => (
                     <motion.div
                         key={i}
@@ -83,7 +85,13 @@ export default function About() {
                                 y: i % 2 ? (window.innerWidth < 640 ? -50 : -100) : (window.innerWidth < 640 ? 50 : 100),
                                 scale: 0
                             },
-                            visible: {opacity: 1, x: 0, y: 0, scale: 1, transition: {duration: .4, delay: (i + 1) * 0.2}}
+                            visible: {
+                                opacity: 1,
+                                x: 0,
+                                y: 0,
+                                scale: 1,
+                                transition: {duration: .4, delay: (i + 1) * 0.2}
+                            }
                         }}
                         viewport={{once: false, margin: "20px"}}
                         whileHover={{scale: 1.1, transition: {duration: .2}}}
