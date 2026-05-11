@@ -21,7 +21,7 @@ export default function Skills() {
     return (
         <div className={"min-h-screen flex flex-col items-center justify-center"}>
             <Heading text={"Skills"}/>
-            <div className={"w-full flex justify-between flex-wrap gap-5 max-sm:gap-2 max-lg:gap-4 px-5 max-sm:px-1"}>
+            <div className={"w-full flex justify-between flex-wrap gap-5 max-sm:gap-4 px-5 max-sm:px-1"}>
                 {techStack.map((data, i) => (
                     <motion.div
                         key={i}
