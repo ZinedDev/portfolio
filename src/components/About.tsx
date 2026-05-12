@@ -30,16 +30,16 @@ export default function About() {
                     whileInView={{opacity: 1, scale: 1}}
                     transition={{delay: 0.1, type: "spring", stiffness: window.innerWidth > 768 ? 60 : 30}}
                     viewport={{once: false}}
-                    className={"relative flex flex-col w-full max-w-200 p-5 xl:right-15 text-justify border border-yellow-600 rounded-xl bg-amber-100 dark:bg-zinc-600 transition-colors duration-500"}
+                    className={"relative content-center place-content-evenly h-60 max-sm:h-80 flex flex-col w-full max-w-200 p-5 xl:right-15 text-justify border border-yellow-600 rounded-xl bg-amber-100 dark:bg-zinc-600 transition-colors duration-500"}
                 >
                     <AnimatePresence mode={"wait"}>
                         <motion.p
                             key={text === aboutText ? "default" : text}
-                            initial={{opacity: 0, y: 10}}
-                            animate={{opacity: 1, y: 0}}
-                            exit={{opacity: 0, y: -10}}
-                            transition={{duration: 0.4, delay: 0.1}}
-                            className={"content-center h-60 max-sm:h-80 first-letter:pl-2 text-lg font-light text-gray-600 dark:text-white p-2 transition-colors duration-500 max-lg:text-[16px] max-sm:text-[14px] whitespace-pre-line"}
+                            initial={{opacity: 0, x: -5}}
+                            animate={{opacity: 1, x: 0}}
+                            exit={{opacity: 0, x: 20}}
+                            transition={{duration: 0.4, delay: 0.2}}
+                            className={"text-left font-light text-[18px] max-sm:text-[14px] tracking-normal whitespace-pre-line first-letter:pl-2 text-gray-600 dark:text-white transition-all duration-500 "}
                         >
                             {text}
                         </motion.p>
@@ -52,7 +52,7 @@ export default function About() {
                 initial="hidden"
                 whileInView="visible"
                 variants={{
-                    hidden: {opacity: 0, y: 200, scale: .5},
+                    hidden: {opacity: 0, y: 100, scale: .5},
                     visible: {opacity: 1, y: 0, scale: 1, transition: {duration: .4, delay: 0.2}}
                 }}
                 viewport={{once: false}}
@@ -64,12 +64,12 @@ export default function About() {
                 <span className={"text-xl"}>{downloadIcon}</span>
             </motion.a>
             <span
-                className={"relative bottom-8 left-15 -rotate-90 scale-[2.5] text-yellow-600 dark:text-zinc-600 transition-colors duration-500 max-sm:hidden"}
+                className={"relative bottom-18 right-11 -rotate-90 scale-[2.5] text-yellow-600 dark:text-zinc-600 transition-colors duration-500 max-sm:hidden"}
             >
-                    {arrowLeftIcon}
-                </span>
+                {arrowLeftIcon}
+            </span>
             <div
-                className={"mt-15 max-sm:mt-5 p-10 w-full flex flex-wrap max-sm:flex-col items-center max-sm:items-start justify-between gap-y-2"}>
+                className={"mt-20 max-xs:mt-1 max-sm:mt-2 p-10 w-full flex flex-wrap max-sm:flex-col items-center max-sm:items-start justify-between gap-y-2"}>
                 {professions.map((profession, i) => (
                     <motion.div
                         key={i}
@@ -81,8 +81,8 @@ export default function About() {
                         variants={{
                             hidden: {
                                 opacity: 0,
-                                x: i % 2 ? (window.innerWidth < 640 ? -50 : -100) : (window.innerWidth < 640 ? 50 : 100),
-                                y: i % 2 ? (window.innerWidth < 640 ? -50 : -100) : (window.innerWidth < 640 ? 50 : 100),
+                                x: i % 2 ? (window.innerWidth < 640 ? -25 : -50) : (window.innerWidth < 640 ? 25 : 50),
+                                y: i % 2 ? (window.innerWidth < 640 ? -25 : -50) : (window.innerWidth < 640 ? 25 : 50),
                                 scale: 0
                             },
                             visible: {

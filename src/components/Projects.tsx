@@ -70,7 +70,7 @@ export default function Projects() {
                         <motion.div
                             key={`id-${data.name}`}
                             layout
-                            transition={{ layout: { type: "spring", stiffness: 100} }}
+                            transition={{ layout: { type: "spring", stiffness: 100, restDelta: 10 } }}
                         >
                             <Project
                                 key={i}

@@ -48,7 +48,7 @@ export default function Question({data, index}: { data: { question: string, answ
             <motion.p
                 initial={{scaleY: 0, height: 0, opacity: 0}}
                 animate={{scaleY: show ? 1 : 0, height: show ? 'auto' : 0, opacity: show ? 1 : 0}}
-                transition={{duration: 0.2, type: 'spring', stiffness: show ? 250 : 50, opacity: {delay: show ? 0.2 : 0}}}
+                transition={{duration: 0.2, type: 'spring', stiffness: show ? 100 : 50, opacity: {delay: show ? 0.2 : 0}}}
                 className={"box-border origin-top px-2 text-lg font-light tracking-wide text-gray-900 dark:text-gray-100 transition-colors duration-500 first-letter:pl-3"}
             >
                 {data.answer}

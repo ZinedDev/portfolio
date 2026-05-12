@@ -101,7 +101,7 @@ export const professions = [
         title: 'Game Dev',
         icon: <GamepadLineIcon />,
         text: 'In 2023 I decided to pick a new hobby: making games. ' +
-                'Since then I have been learning C++ and Unreal Engine through working on personal projects. At this stage I feel quite comfortable programming and implementing gameplay mechanics as well as creating VFXs with Niagara. ' +
+                'Since then I have been learning C++ and Unreal Engine through working on personal projects. At this stage I feel comfortable programming and implementing gameplay mechanics as well as creating VFXs with Niagara. ' +
                 'Currently I am expanding my knowledge on profiling and performance optimization. There is a small game in the works, and I am excited to share it with you soon! '
     },
     {
@@ -114,7 +114,7 @@ export const professions = [
     {
         title: 'Special Education',
         icon: <ClipboardLineIcon />,
-        text: 'I studied Special Education at the University of Hamburg in two steps (B.A. 2008 - 2012 & M.A. 2014 - 2018). ' +
+        text: 'I received my Masters degree in Special Education from the University of Hamburg in 2019. ' +
                 'My studies focused on children with difficulties in learning and social development. ' +
                 'From 2007 till 2023 I worked in various types of social work related professional fields: Assisting bodily and/or mentally disabled people, ' +
                 'teaching, educating and coaching of pre-schoolers to 10 graders, inside and outside the school system, providing support and consultation in protectories etc. '
@@ -138,9 +138,8 @@ export const arrowLeftIcon = <ArrowLeftSFillIcon />
 export const aboutText =
     "Well, hello there!? \n" +
     "I am Deniz... thank you for visiting! \n\n" +
-    "Feel free to check out my experiences, skills and interests. \n" +
-    "Hover over the icons at the bottom and learn what I am about. \n\n"+
-    "You can also download a tech stack focused version of my resume by clicking the red button below. \n\n"
+    "Hover over the icons at the bottom to check out my experiences, skills and interests and learn what I am about. \n"+
+    "You can also download a tech stack focused version of my resume by clicking the red button below."
 // End of About Me
 
 // Experience
@@ -441,7 +440,7 @@ export const questions = [
     {
         question: 'Do you use AI in your development process? ',
         answer:
-        'Yes, I have been using AI for about a year now. What I use it most for is optimization, debugging and last but not least research and explanation. I have neither a long history of coding experience nor traditional or university grade training in software development. ' +
+        'Yes, I have been using AI for about a year now. What I use it most for is optimization, debugging and last but not least research and explanation. ' +
             'Using AI has helped me to break down complex themes and understand them more easily. It has facilitated my learning process and made my workflows more efficient.',
     },
 
