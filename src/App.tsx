@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar.tsx";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState, Suspense} from "react";
 import Toggle from "./components/sub/Toggle.tsx";
 import Load from "./components/sub/Load.tsx";
 import {motion} from "framer-motion";
@@ -69,7 +69,9 @@ function App() {
                                 viewport={{amount: 0.2}}
                                 className={"w-full min-h-screen snap-center"}
                             >
-                                {section.component}
+                                <Suspense fallback={<div className="h-full w-full flex items-center justify-center text-yellow-600">Loading...</div>}>
+                                    {section.component}
+                                </Suspense>
                             </motion.div>
                         ))
                     }

@@ -29,8 +29,8 @@ export default function Projects() {
     }, [index])
 
     return (
-        <div className={"min-h-screen flex flex-col items-center "}>
-            <Heading text={"Projects"}/>
+        <div className={"min-h-screen flex flex-col items-center pt-24 max-sm:pt-10"}>
+        <Heading text={"Projects"} />
             <div className={"flex flex-wrap items-center justify-center gap-5 max-sm:gap-2 py-5 max-sm:py-2 px-2"}>
                 {projectsButton.map((buttonText, i) => (
                     <motion.button
