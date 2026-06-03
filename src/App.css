@@ -35,7 +35,6 @@ html {
     scrollbar-width: none;  /* Firefox */
 }
 
-
 /* Add this to your section utility or global styles */
 .snap-start {
     scroll-snap-align: start;
