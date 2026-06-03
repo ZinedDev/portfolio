@@ -60,7 +60,9 @@ export default function Skills() {
                             name={data.name.toLowerCase().replace(' ', '')}
                             className="h-auto w-10 max-xs:w-8"
                         />
-                        <p className={"text-sm text-gray-600 dark:text-white transition-colors duration-500 max-sm:hidden"}>{data.name}</p>
+                        <p className={"text-sm text-gray-600 dark:text-white transition-colors duration-500 max-sm:hidden"}>
+                            {data.name}
+                        </p>
                     </motion.div>
                 ))}
             </div>

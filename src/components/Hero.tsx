@@ -113,8 +113,7 @@ export default function Hero() {
                     {/*    &</h1>*/}
                     {/*<p className={"text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors"}>I like Capoeira 👌</p>*/}
                 </motion.div>
-                <div
-                    className={'mt-8 flex items-center justify-center gap-x-10 text-3xl text-yellow-600'}>
+                <div className={'mt-8 flex items-center justify-center gap-x-10 text-3xl text-yellow-600'}>
                     {heroIcons.map((icon, i) => (
                         <motion.a
                             href={icon.id}

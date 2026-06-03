@@ -29,37 +29,6 @@ export const heroIcons = [
         icon: <LinkedinLineIcon />,
         label: 'Linkedin',
     },
-
-    // {
-    //     id: 'instagram',
-    //     Icon: InstagramLineIcon,
-    //     url: 'https://instagram.com/yourprofile',
-    //     label: 'Instagram',
-    // },
-    // {
-    //     id: 'facebook',
-    //     Icon: FacebookCircleLineIcon,
-    //     url: 'https://facebook.com/yourprofile',
-    //     label: 'Facebook',
-    // },
-    // {
-    //     id: 'dribbble',
-    //     Icon: DribbbleLineIcon,
-    //     url: 'https://dribbble.com/yourprofile',
-    //     label: 'Dribbble',
-    // },
-    // {
-    //     id: 'youtube',
-    //     Icon: YoutubeLineIcon,
-    //     url: 'https://youtube.com/yourprofile',
-    //     label: 'Youtube',
-    // },
-    // {
-    //     id: 'github',
-    //     Icon: GithubLineIcon,
-    //     url: 'https://github.com/yourprofile',
-    //     label: 'Github',
-    // },
 ]
 
 // About Me
@@ -334,16 +303,6 @@ export const projectsData = [
         height: '400',
         tech: ['Java', 'TS', 'HTML', 'CSS', 'Tailwind', 'React', 'Vite', 'Motion', 'RestAPI', 'Spring', 'MongoDB'],
     },
-    // {
-    //     name: 'RodaAppi - work in progress',
-    //     desc: 'A web application for browsing and posting capoeira events.',
-    //     url: '/work-in-progress-1.png',
-    //     width: '400',
-    //     height: '400',
-    //     tech: ['IntelliJ', 'Java', 'TypeScript', 'HTML', 'CSS', 'TailwindCSS', 'Vite', 'React', 'FramerMotion', 'RestAPI', 'Spring', 'MongoDB'],
-    // },
-
-
 ]
 
 export const projectsButton = [
