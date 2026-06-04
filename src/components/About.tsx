@@ -1,6 +1,6 @@
 import Heading from "./sub/Heading.tsx";
 import AboutImage from "../../public/about-1.png";
-import CV from "../../public/CV_TechStack_DW.pdf";
+import CV from "../../public/CV_TechStack.pdf";
 import {aboutText, downloadIcon, arrowLeftIcon, professions} from "../assets";
 import {motion, AnimatePresence} from "framer-motion";
 import {useState} from "react";
